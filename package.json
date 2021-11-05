@@ -1,0 +1,22 @@
+{
+  "name": "file-tree",
+  "version": "0.1.0",
+  "description": "electron file explorer tree",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novel-plus/file-tree.git"
+  },
+  "author": "fifteenmania",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/novel-plus/file-tree/issues"
+  },
+  "homepage": "https://github.com/novel-plus/file-tree#readme",
+  "devDependencies": {
+    "electron": "^15.3.0"
+  }
+}
