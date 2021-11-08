@@ -60,11 +60,12 @@ async function handleOpenDirectory(targetWindow, basePath=app.getPath('documents
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         webPreferences: {
-            preload: path.join(__dirname, 'file-tree', 'preload.js')
+            preload: path.join(__dirname, 'file-tree', 'preload.js'),
+            defaultEncoding: 'UTF-8'
         }
     });
     mainWindow.loadFile(path.join('file-tree', 'index.html'));
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
     return mainWindow;
 }
 
