@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>file tree example</title>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     </head>
     <body>
-        <h1>hello</h1>
-        <div class="dir-tree" id="dir-tree-root"></div>
+        <button id="open-directory-button">폴더 열기</button>
+        <div class="dir-tree" id="dir-tree-root">
+        </div>
     </body>
     <script src="renderer.js"></script>
 </html>
