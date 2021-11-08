@@ -24,7 +24,7 @@ async function getDirectoryTree(dirName, encoding=defaultEncoding) {
     for await (const dirent of dir) {
         const direntPath = path.join(dirName, dirent.name);
         if (dirent.isDirectory()) {
-            const subTree = await getDirectoryTree(direntPath);
+            const subTree = await getDirectoryTree(direntPath, encoding=encoding);
             result.items.push(subTree);
         } else {
             result.items.push({
@@ -37,7 +37,7 @@ async function getDirectoryTree(dirName, encoding=defaultEncoding) {
     return result;
 }
 
-async function handleOpenDirectory(targetWindow, basePath=app.getAppPath()) {
+async function handleOpenDirectory(targetWindow, basePath=app.getPath('documents')) {
     const fileSelect = await dialog.showOpenDialog(targetWindow, {
         title: "폴더를 선택해주세요",
         properties: ['openDirectory'],
